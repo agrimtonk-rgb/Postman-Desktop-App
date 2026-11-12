@@ -1,0 +1,168 @@
+{
+  "info": {
+    "_postman_id": "a9108b61-26c7-4ebc-8827-013110915da9",
+    "name": "Intro to Backend - Node & Express Tutorial",
+    "description": "Complete Postman collection for testing the User Authentication and Post CRUD APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Users",
+      "item": [
+        {
+          "name": "1. Register User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"username\": \"testuser\",\n  \"email\": \"testuser@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/users/register",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "users", "register"]
+            }
+          }
+        },
+        {
+          "name": "2. Login User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"testuser@example.com\",\n  \"password\": \"password123\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/users/login",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "users", "login"]
+            }
+          }
+        },
+        {
+          "name": "3. Logout User",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"testuser@example.com\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/users/logout",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "users", "logout"]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Posts",
+      "item": [
+        {
+          "name": "1. Create Post",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Node.js Backend Post\",\n  \"description\": \"Building REST APIs with Express and MongoDB\",\n  \"age\": 22\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/posts/create",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "posts", "create"]
+            }
+          }
+        },
+        {
+          "name": "2. Get All Posts",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/posts/getPosts",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "posts", "getPosts"]
+            }
+          }
+        },
+        {
+          "name": "3. Update Post",
+          "request": {
+            "method": "PATCH",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"Updated Post Title\",\n  \"description\": \"Updated description for the post\"\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/v1/posts/update/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "posts", "update", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "PASTE_POST_ID_HERE"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "4. Delete Post",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{base_url}}/api/v1/posts/delete/:id",
+              "host": ["{{base_url}}"],
+              "path": ["api", "v1", "posts", "delete", ":id"],
+              "variable": [
+                {
+                  "key": "id",
+                  "value": "PASTE_POST_ID_HERE"
+                }
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:4000"
+    }
+  ]
+}
+
