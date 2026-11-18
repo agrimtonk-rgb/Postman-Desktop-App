@@ -1,0 +1,14 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/posts/create"
+method: POST
+headers:
+  Content-Type: application/json
+body:
+  type: text
+  content: |-
+    {
+      "name": "Node.js Backend Post",
+      "description": "Building REST APIs with Express and MongoDB",
+      "age": 22
+    }
+order: 1000

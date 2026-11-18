@@ -1,0 +1,13 @@
+# Use this workspace to collaborate
+workspace:
+  id: 1303f462-a178-4771-8acb-64d246263b60
+
+localResources:
+  collections:
+    - ../Intro to Backend - Node & Express Tutorial
+
+# Each entry here maps a local resource to one or more corresponding objects in Postman Cloud
+
+cloudResources:
+  collections:
+    ../Intro to Backend - Node & Express Tutorial: a9108b61-26c7-4ebc-8827-013110915da9

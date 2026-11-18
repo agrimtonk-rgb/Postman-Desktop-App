@@ -1,0 +1,4 @@
+$kind: collection
+description: Complete Postman collection for testing the User Authentication and Post CRUD APIs
+variables:
+  base_url: http://localhost:4000

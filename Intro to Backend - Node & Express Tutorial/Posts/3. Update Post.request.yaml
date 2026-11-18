@@ -1,0 +1,15 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/posts/update/:id"
+method: PATCH
+headers:
+  Content-Type: application/json
+pathVariables:
+  id: 6afdc4183bc541bc340e0e5c
+body:
+  type: text
+  content: |-
+    {
+      "name": "Updated Post Title",
+      "description": "Updated description for the post"
+    }
+order: 3000

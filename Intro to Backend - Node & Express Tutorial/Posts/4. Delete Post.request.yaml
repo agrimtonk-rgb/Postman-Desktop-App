@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{base_url}}/api/v1/posts/delete/:id"
+method: DELETE
+pathVariables:
+  id: PASTE_POST_ID_HERE
+order: 4000
