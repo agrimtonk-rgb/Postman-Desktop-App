@@ -41,7 +41,6 @@ This repository contains the complete implementation of the **Intro to Backend W
 │       ├── app.js
 │       └── index.js
 ├── .env
-├── .env.example
 ├── .gitignore
 ├── Intro_to_Backend_Postman_Collection.json
 └── package.json
